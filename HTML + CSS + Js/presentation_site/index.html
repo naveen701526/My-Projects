@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+        <title>Presentation</title>
+
+    </head>
+
+    <body>
+        <section id="page-1" class="page">
+            <h1>What Makes JavaScript Popular?</h1>
+
+            <p>The question you’re probably wondering is, what makes JavaScript so widely adopted and popular? Here are
+                some good
+                reasons I personally believe contributed to the popularity of JavaScript.
+
+            </p>
+            <img class="images" src="image.png" alt="image">
+
+            <div>
+                <a href="#page-2" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i> </a>
+            </div>
+        </section>
+        <section id="page-2" class="page">
+            <h2>1.JavaScript Code Is Executable on the Client and Server</h2>
+            <p>We refer the client as the browser and the server as outside the browser context. You’re most likely
+                reading the article
+                on a browser or the native Medium app, which are both clients. The article is fetched from the server
+                and served on the
+                client.</p>
+            <p>In 2009, Node.js was released. Node.js is an open-source, cross-platform JavaScript run-time environment
+                that executes
+                JavaScript code outside of a browser.</p>
+            <p>This was an absolute game changer. Before, you were constrained by the browser. With the release of Node,
+                you could
+                write your application in uni language manner, meaning your back and front end in one language.</p>
+            <div>
+                <a href="#page-1" class="btn btn-dark">Previous Page <i class="fas fa-arrow-circle-up"></i> </a>
+                <a href="#page-3" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i> </a>
+            </div>
+        </section>
+        <section id="page-3" class="page">
+            <h1>2.Flexible and Dynamic</h1>
+            <p>JavaScript gives us a lot of freedom and choices to make. To really understand how dynamic JavaScript is,
+                let’s compare the widely known “hello world” between Java and JavaScript.</p>
+
+            <div class="ims">
+
+                <img class="im1" src="1.png" alt="image">
+                <img class="im2" src="2.png" alt="image">
+            </div>
+            <div>
+                <a href="#page-2" class="btn btn-dark">Previous Page <i class="fas fa-arrow-circle-up"></i> </a>
+                <a href="#page-4" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i> </a>
+            </div>
+        </section>
+        <section id="page-4" class="page">
+            <h1>3.Huge Active Community</h1>
+            <p>The JavaScript developer community hasn’t always been calm. Since the JavaScript ES2015 release, there
+                are lots of new
+                frameworks, build tools, and new language features to learn. This constant “keeping up” feeling led to
+                the term
+                JavaScript fatigue.</p>
+            <p>JavaScript Fatigue: There are dozens of JavaScript frameworks, and all of them argue that their
+                philosophy is best. And
+                if you somehow found time to learn them all, after you learned the last one, you would hear that the
+                first one has
+                changed everything and you need to try it again. You would never get any actual work done. You’d spend
+                all of your time
+                just trying out frameworks.</p>
+            <div>
+                <a href="#page-3" class="btn ">Previous Page <i class="fas fa-arrow-circle-up"></i> </a>
+
+            </div>
+        </section>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+        <script>
+            // Smooth Scrolling
+            $( '.btn' ).on( 'click', function ( event )
+            {
+                if ( this.hash!=='' )
+                {
+                    event.preventDefault();
+                    const hash=this.hash;
+                    $( 'html, body' ).animate(
+                        {
+                            scrollTop: $( hash ).offset().top
+                        },
+                        800
+                    );
+                }
+            } )
+
+        </script>
+    </body>
+
+</html>

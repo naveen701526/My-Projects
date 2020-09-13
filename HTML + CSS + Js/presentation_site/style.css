@@ -1,0 +1,156 @@
+:root{
+    --page-1-color: rgb(240, 75, 231);
+    --page-2-color: rgb(233, 162, 69);
+    --page-3-color: rgb(129, 228, 146);
+    --page-4-color: rgb(161, 152, 216);
+    --animate-speed: 1s;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4rem;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#page-1{
+    background: var(--page-1-color);
+}
+#page-2{
+    background: var(--page-2-color);
+}
+#page-3{
+    background: var(--page-3-color);
+}
+#page-4{
+    background: var(--page-4-color);
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 4rem;
+}
+
+.page h1{
+    font-size: 4rem;
+    line-height: 1.rem;
+    margin: 1rem;
+    
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+#page-1 h1{
+    /* transition: all var(--animate-speed) ease-in; */
+    animation: animate-1 var(--animate-speed) forwards;
+    position: relative;
+}
+
+.images{
+    height: 60vh;
+    position: relative;
+    top: -2000px;
+    left: 20px;
+    animation: animate-3 var(--animate-speed) forwards ease-in 0.8s;
+    animation-delay: 2s;
+}
+
+@keyframes animate-3{
+    
+    
+    to{
+        left: 0;
+        top: 0;
+        transform: scale(0.5) rotate(1080deg) scale(2);
+        
+    }
+}
+
+
+
+@keyframes animate-1{
+    from{
+        top: -1000px;
+        
+    }
+    
+    to{
+        top: 0px;
+        transform: scale(0.5) skew(360deg) rotate(360deg) scale(1.5);
+    }
+}
+
+
+
+#page-1 p{
+    /* transition: all var(--animate-speed) ease-in; */
+    animation: animate-2 var(--animate-speed) forwards ease-in 1s;
+    
+    position: relative;
+    left: -2200px;
+    
+}
+
+.ims{
+    display: grid;
+    gap: 1rem;
+    
+    grid-template-columns: 1fr 2fr;
+}
+
+
+@keyframes animate-2{
+    
+    
+    to{
+        left: 0;
+        
+        transform: scale(0.5) rotate(180deg) rotate(-180deg) scale(2);
+        
+    }
+}
+
+
+
+
+
+
+
+
+.page p{
+    font-size: 1.3rem;
+
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: whitesmoke;
+    text-decoration: none;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    transition: all 0.6s ease-in;
+    
+}
+
+.btn:hover, .btn-dark{
+    background: #333;
+    color: #ffffff;
+
+}
+
+.btn-dark:hover {
+    background: #f4f4f4;
+    color: #333;
+
+}
