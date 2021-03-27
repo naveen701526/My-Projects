@@ -2,6 +2,9 @@
 
 #include <stdlib.h>
 
+//Size of the hash table
+#define MAX 10000
+
 void two_sum(int *, int, int);
 
 int main()
@@ -24,7 +27,7 @@ int main()
 void two_sum(int *ptr, int n, int target)
 {
     int index, temp;
-    int hash[10] = {0};
+    int hash[MAX] = {0};
     for (index = 0; index < n; index++)
     {
         temp = target - *(ptr + index);
