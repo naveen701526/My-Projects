@@ -40,3 +40,9 @@ void two_sum(int *ptr, int n, int target)
         hash[*(ptr + index)] = 1;
     }
 }
+
+
+//Time complexity: O(n)
+//Space complexity: O(K) where K is range of integers
+
+
