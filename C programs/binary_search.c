@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Function which will find the required element in array
+//provided if the array is sorted 
 int binary_search(int *, int, int, int);
 
 int main()
