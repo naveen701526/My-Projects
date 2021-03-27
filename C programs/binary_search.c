@@ -32,6 +32,7 @@ int binary_search(int *p, int l, int r, int target)
     int m;
     while (l <= r)
     {
+        //Calculating the index where the element might be present
         m = l + r / 2;
         if (*(p + m) == target)
             return m;
