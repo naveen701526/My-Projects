@@ -27,19 +27,19 @@ int main()
     return 0;
 }
 
-int binary_search(int *p, int l, int r, int target)
+int binary_search(int *p, int left, int right, int target)
 {
-    int m;
+    int mid;
     while (l <= r)
     {
         //Calculating the index where the element might be present
-        m = l + r / 2;
-        if (*(p + m) == target)
-            return m;
-        if (*(p + m) < target)
-            l = m + 1;
+        mid = left + right / 2;
+        if (*(p + mid) == target)
+            return mid;
+        if (*(p + mid) < target)
+            left = mid + 1;
         else
-            r = m - 1;
+            right = mid - 1;
     }
 
     return -1;
