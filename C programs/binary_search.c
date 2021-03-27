@@ -10,7 +10,7 @@ int main()
     int *p, n, target;
     printf("enter the size: \n");
     scanf("%d", &n);
-
+    //Allocate memory to array
     p = (int *)malloc(n * sizeof(int));
     for (int i = 0; i < n; i++)
     {
