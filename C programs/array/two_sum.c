@@ -5,6 +5,7 @@
 //Size of the hash table
 #define MAX 10000
 
+//Function which will print the pair of elements who sum is equal to target variable
 void two_sum(int *, int, int);
 
 int main()
