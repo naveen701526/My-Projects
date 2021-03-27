@@ -41,3 +41,8 @@ int binary_search(int *p, int l, int r, int target)
 
     return -1;
 }
+
+
+
+//Time complexity of binary search is O(logn)
+//Space complexity of binary search is O(1)
