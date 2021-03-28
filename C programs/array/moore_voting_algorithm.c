@@ -20,6 +20,8 @@ int main()
     return 0;
 }
 
+//function which finds the majority element
+//occuring n/2 + 1 times
 int majority_finder(int *ptr, int n)
 {
     int majority_index = 0, count = 1;
@@ -38,6 +40,7 @@ int majority_finder(int *ptr, int n)
     return *(ptr + majority_index);
 }
 
+//function to figure out wheter the majority is really majority or not
 int majority_verifier(int *ptr, int n, int majority_element)
 {
     int count = 0;
