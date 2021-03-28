@@ -46,3 +46,7 @@ int majority_verifier(int *ptr, int n, int majority_element)
             count++;
     return (count > n / 2) ? 1 : 0;
 }
+
+
+// Time complexity: O(n)
+// Space complexity: O(1)
