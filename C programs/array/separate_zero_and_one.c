@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+// Function which put zero to left hand side and one's to right hand side
 void seperate0and1(int arr[], int size)
 {
 int leftIndex = 0, rightIndex = size-1;
