@@ -118,6 +118,22 @@ footer {
     .grid-2 {
         grid-template-columns: 1fr;
     }
+    .services div {
+        border-bottom: #333 dashed 1px;
+        padding: 1.2rem 1rem;
+    }
+}
+
+/* Landscape */
+@media (max-height: 500px) {
+    .content .title,
+    .content .text {
+        display: none;
+    }
+
+    .content {
+        top: 0;
+    }
 }
 
 footer p {
