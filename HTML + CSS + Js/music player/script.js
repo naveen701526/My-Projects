@@ -16,12 +16,11 @@ const songs = ['hey', 'summer', 'ukulele'];
 
 
 // Keep track of song
-let songIndex = 2;
+let songIndex = 0;
 
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
-
 
 // Update song details
 function loadSong(song) {
@@ -30,12 +29,13 @@ function loadSong(song) {
   cover.src = `images/${song}.jpg`;
 }
 
-
-// Play song
-function playSong() {
-  musicContainer.classList.add('play');
-  playBtn.querySelector('i.fas').classList.remove('fa-play');
-  playBtn.querySelector('i.fas').classList.add('fa-pause');
-
-  audio.play();
-}
+// Event listeners
+playBtn.addEventListener('click', () => {
+    const isPlaying = musicContainer.classList.contains('play')
+    if (isPlaying) {
+        pauseSong()
+    }
+    else {
+        playSong()
+    }
+})
