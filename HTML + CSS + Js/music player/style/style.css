@@ -68,3 +68,29 @@ body {
         transform: rotate(360deg);
     }
 }
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: #fff;
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
