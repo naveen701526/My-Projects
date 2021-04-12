@@ -1,1 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'New Tegomin', serif;
+    background-image: linear-gradient(57deg, #ddd6f3, #faaca8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(248, 36, 36, 0.6);
+}
