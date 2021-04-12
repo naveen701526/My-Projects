@@ -19,4 +19,52 @@ body {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 20px 20px 0 rgba(248, 36, 36, 0.6);
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+}
+
+.img-container {
+    width: 110px;
+    position: relative;
+}
+
+.img-container::after {
+    content: '';
+    background-color: whitesmoke;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-container img {
+    width: inherit;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
