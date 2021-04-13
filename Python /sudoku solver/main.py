@@ -33,11 +33,13 @@ def is_valid(puzzle, guess, row, col):
     row_start = (row // 3) * 3  # 10 // 3 = 3, 5 // 3 = 1, 1 // 3 = 0
     col_start = (col // 3) * 3
 
+    # we are using 0-8 for our indices
     for r in range(row_start, row_start + 3):
         for c in range(col_start, col_start + 3):
             if puzzle[r][c] == guess:
                 return False
 
+    # if we get to this statement then the checks pass
     return True
 
 
