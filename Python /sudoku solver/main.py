@@ -70,3 +70,7 @@ def solve_sudoku(puzzle):
                 return True
         # it not valid or if nothing gets returned true, then we need to backtrack and try a new number
         puzzle[row][col] = -1  # reset our guess..
+
+    # if none of the numbers that we try work
+    # then we can't find any solution of this puzzle
+    return False
