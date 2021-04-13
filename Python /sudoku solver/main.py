@@ -65,3 +65,8 @@ def solve_sudoku(puzzle):
             # if this guess is valid then make it final
             # and add it in your final answer
             puzzle[row][col] = guess
+            # recursively call the function solve_sudoku
+            if solve_sudoku(puzzle):
+                return True
+        # it not valid or if nothing gets returned true, then we need to backtrack and try a new number
+        puzzle[row][col] = -1  # reset our guess..
