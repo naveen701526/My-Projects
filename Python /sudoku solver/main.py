@@ -1,5 +1,14 @@
 def find_next_empty(puzzle):
-    pass
+    # finds the next row, col on the puzzle that 's not filled yet ---> rep with -1return row, col tuple
+    # (or (none, none) if there is none)
+
+    # we are using 0-8 for our indices
+    for r in range(9):
+        for c in range(9):
+            if puzzle[r][c] == -1:
+                return r, c
+
+    return None, None  # if no spaces in the puzzle are empty (-1)
 
 
 def solve_sudoku(puzzle):
