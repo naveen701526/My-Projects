@@ -28,8 +28,17 @@ def is_valid(puzzle, guess, row, col):
         return False
 
     # and then the square
+    # we need to get where the 3x3 square starts
+    # and iterate over the 3 values in the row/column
     row_start = (row // 3) * 3  # 10 // 3 = 3, 5 // 3 = 1, 1 // 3 = 0
     col_start = (col // 3) * 3
+
+    for r in range(row_start, row_start + 3):
+        for c in range(col_start, col_start + 3):
+            if puzzle[r][c] == guess:
+                return False
+
+    return True
 
 
 def solve_sudoku(puzzle):
