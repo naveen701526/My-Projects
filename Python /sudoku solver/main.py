@@ -61,4 +61,7 @@ def solve_sudoku(puzzle):
     # if there is a place to put a number, then make a guess between a number 1 to 9
     for guess in range(1, 10):  # range(1,10) is 1,2,3,...9
         # check if it is a valid guess
-        if is_valid(puzzle, guess, r)
+        if is_valid(puzzle, guess, row, col):
+            # if this guess is valid then make it final
+            # and add it in your final answer
+            puzzle[row][col] = guess
