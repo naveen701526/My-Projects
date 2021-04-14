@@ -1,6 +1,6 @@
 const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
 
-// btn variable will refer to button element
+// btn variable will refer to button element 
 const btn = document.querySelector("#btn");
 
 
