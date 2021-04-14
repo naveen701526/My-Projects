@@ -28,5 +28,5 @@ btn.addEventListener('click', () => {
 
 
 function getRandomNumber() {
-    return Math.floor(Math.random() * 15)
+    return Math.floor(Math.random() * hex.length)
 }

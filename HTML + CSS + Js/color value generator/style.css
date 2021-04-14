@@ -18,7 +18,7 @@ Variables
     --clr-primary-3: hsl(205, 72%, 37%);
     --clr-primary-4: hsl(205, 63%, 48%);
     /* primary/main color */
-    --clr-primary-5: hsl(205, 78%, 60%);
+    --clr-primary-5: hsl(120, 100%, 50%);
     /* lighter shades of primary color */
     --clr-primary-6: hsl(205, 89%, 70%);
     --clr-primary-7: hsl(205, 90%, 76%);
@@ -40,7 +40,7 @@ Variables
     --clr-white: #fff;
     --clr-red-dark: hsl(360, 67%, 44%);
     --clr-red-light: hsl(360, 71%, 66%);
-    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-dark: hsl(126, 93%, 84%);
     --clr-green-light: hsl(125, 71%, 66%);
     --clr-black: #222;
     --ff-primary: 'Roboto', sans-serif;
@@ -162,7 +162,27 @@ nav {
     display: grid;
     align-items: center;
     box-shadow: var(--dark-shadow);
+    animation-name: example;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes example {
+    0% {
+        background-image: linear-gradient(#ffafbd, #ffc3a0);
+    }
+    25% {
+        background-image: linear-gradient(#2193b0, #6dd5ed);
+    }
+    50% {
+        background-image: linear-gradient(#56ab2f, #a8e063);
+    }
+    100% {
+        background-image: linear-gradient(#bdc3c7, #2c3e50);
+    }
+}
+
 .nav-center {
     width: 90vw;
     max-width: var(--fixed-width);
@@ -173,7 +193,7 @@ nav {
 }
 .nav-center h4 {
     margin-bottom: 0;
-    color: var(--clr-primary-5);
+    color: yellow;
 }
 .nav-links {
     display: flex;
@@ -182,7 +202,7 @@ nav a {
     text-transform: capitalize;
     font-weight: 700;
     font-size: 1rem;
-    color: var(--clr-primary-1);
+    color: rgb(255, 0, 0);
     letter-spacing: var(--spacing);
     margin-right: 1rem;
 }
