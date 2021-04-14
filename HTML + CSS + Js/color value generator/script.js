@@ -11,7 +11,14 @@ btn.addEventListener("click", () => {
 //   console.log(randomNumber);
     // get random number between 0 - 3
     // because array are zero index based
-const randomNumber =  2
+    const randomNumber = 2;
+    document.body.style.backgroundColor = colors[randomNumber]
+    color.textContent =  colors[randomNumber]
 //   document.body.style.backgroundColor = colors[randomNumber];
 //   color.textContent = colors[randomNumber];
 });
+
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * colors.length);
+}
