@@ -18,4 +18,15 @@ const color = document.querySelector('.color')
 // when the button in the page is clicked
 btn.addEventListener('click', () => {
     let hexColor = '#'
+
+    for (let i = 0; i < 6; i++){
+        hexColor += hex[getRandomNumber()]
+    }
+    color.textContent = hexColor
+    document.body.style.backgroundColor = hexColor
 })
+
+
+function getRandomNumber() {
+    return Math.floor(Math.random() * 15)
+}
