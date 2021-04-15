@@ -4,29 +4,42 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+        <!-- linking your style sheet -->
         <link rel="stylesheet" href="style.css" />
+
+        <!-- linking your css styles of font awesome -->
         <link rel="stylesheet" href="styles/all.min.css" />
+
+        <!-- your title of the page -->
         <title>Counting App</title>
     </head>
     <body>
+        <!-- main element of our dom  -->
         <main>
+            <!-- div with container class which encloses the contents of this page -->
             <div class="container">
+                <!-- heading of our app -->
                 <h1>counter</h1>
+                <!-- value of the counter by default it is zero which will change dynamically -->
                 <span id="value">0</span>
+                <!-- div tag with class button-container which encloses buttons of the counter app -->
                 <div class="button-container">
                     <button class="btn decrease">
+                        <!-- font awesome element which is minus icon to decrement count -->
                         <i class="fas fa-minus-square"></i>
                     </button>
                     <button class="btn reset">
+                        <!-- font awesome element which is reset icon to reset the count to zero -->
                         <i class="fas fa-power-off"></i>
                     </button>
                     <button class="btn increase">
+                        <!-- font awesome element which is plus icon to increment the count  -->
                         <i class="fas fa-plus-square"></i>
                     </button>
                 </div>
             </div>
         </main>
+        <!-- linking of our js file -->
         <script src="script.js"></script>
     </body>
 </html>
