@@ -11,6 +11,12 @@ const value = document.querySelector('#value')
 const btns = document.querySelectorAll('.btn')
 
 
-btns.forEach((item) => {
-    console.log(item);
+btns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        const styles = e.currentTarget.classList;
+        if (styles.contains('decrease')) {
+            count--;
+        }
+        value.textContent = count
+    })
 })
