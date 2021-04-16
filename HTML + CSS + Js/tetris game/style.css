@@ -10,3 +10,7 @@
     height: 20px;
     width: 20px;
 }
+
+.tetromino {
+    background-color: blue;
+}
