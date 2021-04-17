@@ -20,6 +20,7 @@ body {
     width: 90vw;
 }
 
+/* styling of the div container which has image and heading on it */
 .panel {
     background-size: cover;
     background-position: center;
@@ -34,6 +35,8 @@ body {
     transition: flex 0.7s ease-in;
 }
 
+/* styling of heading which is displayed over the images */
+
 .panel h3 {
     font-size: 24px;
     position: absolute;
@@ -43,14 +46,18 @@ body {
     opacity: 0;
 }
 
+/* when clicked on a specific panel it'll show with higher width */
 .panel.active {
     flex: 5;
 }
 
+/* when the panel is active then heading should be displayed */
 .panel.active h3 {
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
 }
+
+/* deals with how the styling should be done when displayed on small devices */
 
 @media (max-width: 480px) {
     .container {
