@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    background-color: #333;
 }
 
 body {
@@ -40,6 +41,7 @@ body {
 .panel h3 {
     font-size: 24px;
     position: absolute;
+    background-color: unset;
     bottom: 20px;
     left: 20px;
     margin: 0;
