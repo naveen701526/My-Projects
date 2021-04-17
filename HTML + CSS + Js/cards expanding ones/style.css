@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Roboto+Slab&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
