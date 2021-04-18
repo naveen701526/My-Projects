@@ -3,6 +3,7 @@
 :root {
     --line-border-fill: #3498db;
     --line-border-empty: #e0e0e0;
+    --transition-effect: 0.4s ease;
 }
 
 * {
@@ -53,7 +54,7 @@ body {
     height: 4px;
     width: 0%;
     z-index: -1;
-    transition: 0.4s ease;
+    transition: var(--transition-effect);
 }
 
 .circle {
@@ -66,5 +67,9 @@ body {
     align-items: center;
     justify-content: center;
     border: 3px solid var(--line-border-empty);
-    transition: 0.4s ease;
+    transition: var(--transition-effect);
+}
+
+.circle.active {
+    border-color: var(--line-border-fill);
 }
