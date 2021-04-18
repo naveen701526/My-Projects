@@ -94,6 +94,11 @@ body {
     outline: 0;
 }
 
+.btn:hover {
+    background-color: rgb(5, 255, 172);
+    transition: 0.5s ease-in;
+}
+
 .btn:disabled {
     background-color: var(--line-border-empty);
     cursor: not-allowed;
