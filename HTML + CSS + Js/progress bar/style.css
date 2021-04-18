@@ -85,3 +85,7 @@ body {
     margin: 5px;
     font-size: 14px;
 }
+
+.btn:active {
+    transform: scale(0.98);
+}
