@@ -88,3 +88,10 @@ body {
     color: #333;
     line-height: 1.5;
 }
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
