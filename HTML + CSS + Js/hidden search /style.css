@@ -47,3 +47,8 @@ body {
     height: 50px;
     transition: transform 0.3s ease;
 }
+
+.btn:focus,
+.input:focus {
+    outline: none;
+}
