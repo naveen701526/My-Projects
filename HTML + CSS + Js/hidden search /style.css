@@ -11,6 +11,17 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-
+    background-image: linear-gradient(
+        90deg,
+        #3f87a6,
+        #ebf8e1,
+        #f69d3c,
+        #561423
+    );
     margin: 0;
+}
+
+.search {
+    position: relative;
+    height: 50px;
 }
