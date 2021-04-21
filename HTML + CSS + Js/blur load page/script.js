@@ -14,4 +14,10 @@ function blurring() {
     }
     // console.log(load);
     loadText.innerText = `${load}%`
+    
+}
+
+
+function scale (number, inMin, inMax, outMin, outMax) {
+    return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
