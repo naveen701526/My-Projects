@@ -95,6 +95,11 @@ if __name__ == '__main__':
         [6, 7, -1,   1, -1, 5,   -1, 4, -1],
         [1, -1, 8,   -1, -1, -1,   2, -1, -1]
     ]
-    print(solve_sudoku(example_board))
 
+    print('Given Puzzle:')
+    pprint(example_board)
+    solve_sudoku(example_board)
+    print()
+
+    print('Solved Puzzle:')
     pprint(example_board)
