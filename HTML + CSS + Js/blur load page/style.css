@@ -11,4 +11,22 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    background: url('https://images.unsplash.com/photo-1600577916048-804c9191e36c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80')
+        no-repeat center center/cover;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px);
+}
+
+.loading-text {
+    font-size: 50px;
+    color: #fff;
 }
