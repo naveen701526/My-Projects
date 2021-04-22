@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .container {
@@ -9,14 +9,15 @@ body {
     gap: 10px;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    /* margin: 10px; */
+    height: 95vh;
+    margin: 20px;
 }
 
 .container img {
     width: 200px;
     height: 200px;
     cursor: pointer;
+    object-fit: cover;
 }
 
 #lightbox {
@@ -36,10 +37,18 @@ body {
 }
 
 #lightbox img {
+    width: 400px;
+    height: 400px;
     max-width: 90%;
     max-height: 80%;
     padding: 4px;
     background-color: black;
     border: 2px solid whitesmoke;
     border-radius: 10px;
+}
+
+.container img:hover {
+    transform: scale(1.1);
+    transition: transform ease-in-out 0.3s;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.8);
 }
