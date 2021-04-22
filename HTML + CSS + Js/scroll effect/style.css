@@ -41,3 +41,7 @@ h1 {
 .box.show {
     transform: translateX(0);
 }
+
+.box h2 {
+    font-size: 45px;
+}
