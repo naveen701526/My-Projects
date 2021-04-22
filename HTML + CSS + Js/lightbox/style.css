@@ -1,14 +1,36 @@
 body {
     margin: 0;
+    /* overflow: hidden; */
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(3, 200px);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* margin: 10px; */
 }
 
 .container img {
     width: 200px;
     height: 200px;
     cursor: pointer;
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
