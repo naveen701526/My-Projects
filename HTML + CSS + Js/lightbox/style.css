@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+.container img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
