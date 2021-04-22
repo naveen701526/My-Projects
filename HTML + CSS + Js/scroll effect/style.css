@@ -13,6 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     letter-spacing: 3px;
+    overflow-x: hidden;
 }
 
 h1 {
