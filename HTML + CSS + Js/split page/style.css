@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'El Messiri', sans-serif;
+}
