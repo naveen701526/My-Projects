@@ -29,7 +29,7 @@ body {
 
 .split.left {
     left: 0;
-    background: url('https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background: url('images/fullstack.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -55,4 +55,30 @@ body {
     background: url('images/Data-Science.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+        white-space: pre-wrap;
+        top: 30%;
+    }
+}
+
+@media (max-width: 1025px) {
+    h1 {
+        font-size: 3rem;
+
+        top: 30%;
+    }
 }
