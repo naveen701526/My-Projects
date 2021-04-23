@@ -115,6 +115,22 @@ h1 {
     }
 }
 
+.hover-left .left {
+    width: 75%;
+}
+
+.hover-left .right {
+    width: 25%;
+}
+
+.hover-right .right {
+    width: 75%;
+}
+
+.hover-right .left {
+    width: 25%;
+}
+
 @media (max-width: 500px) {
     h1 {
         font-size: 1.3rem;
