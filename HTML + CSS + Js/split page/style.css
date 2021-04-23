@@ -91,6 +91,10 @@ h1 {
         white-space: pre-wrap;
         top: 30%;
     }
+    .btn {
+        padding: 1.2rem;
+        width: 12rem;
+    }
 }
 
 @media (max-width: 1025px) {
