@@ -10,6 +10,7 @@ body {
     overflow: hidden;
     height: 100vh;
     margin: 0;
+    color: antiquewhite;
 }
 
 .container {
@@ -29,6 +30,13 @@ body {
 .split.left {
     left: 0;
     background: url('https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right {
+    right: 0;
+    background: url('images/Data-Science.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
