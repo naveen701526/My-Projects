@@ -70,9 +70,20 @@ body {
     border: #fff solid 0.2rem;
     font-size: 1rem;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
     width: 15rem;
     padding: 1.5rem;
+}
+
+.split.left .btn:hover {
+    background-color: rgba(87, 84, 236, 1);
+    border-color: rgba(87, 84, 236, 1);
+}
+
+.split.right .btn:hover {
+    background-color: rgba(230, 232, 233, 1);
+    border-color: rgba(230, 232, 233, 1);
+    color: #333;
 }
 
 h1 {
@@ -84,11 +95,18 @@ h1 {
     transform: translateX(-50%);
     white-space: nowrap;
 }
+@media (max-width: 1025px) {
+    h1 {
+        font-size: 3rem;
+
+        top: 30%;
+    }
+}
 
 @media (max-width: 800px) {
     h1 {
         font-size: 2rem;
-        white-space: pre-wrap;
+
         top: 30%;
     }
     .btn {
@@ -97,10 +115,26 @@ h1 {
     }
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 500px) {
     h1 {
-        font-size: 3rem;
+        font-size: 1.3rem;
 
         top: 30%;
+    }
+    .btn {
+        padding: 1.2rem;
+        width: 10rem;
+    }
+}
+@media (max-width: 321px) {
+    h1 {
+        font-size: 1rem;
+
+        top: 30%;
+    }
+    .btn {
+        padding: 0.2rem;
+        width: 8rem;
+        font-size: 0.8rem;
     }
 }
