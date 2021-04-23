@@ -73,6 +73,7 @@ body {
     text-transform: capitalize;
     width: 15rem;
     padding: 1.5rem;
+    transition: all 0.7s ease-in-out;
 }
 
 .split.left .btn:hover {
@@ -113,6 +114,13 @@ h1 {
         padding: 1.2rem;
         width: 12rem;
     }
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+    transition: all 0.4s ease-in-out;
 }
 
 .hover-left .left {
