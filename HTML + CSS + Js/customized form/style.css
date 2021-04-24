@@ -48,3 +48,9 @@ body {
     font-size: 18px;
     color: #fff;
 }
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: purple;
+}
