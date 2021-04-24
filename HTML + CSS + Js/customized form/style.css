@@ -5,6 +5,8 @@
 }
 
 body {
+    background-image: linear-gradient(#cc95c0, #dbd4b4, #7aa1d2);
+    color: rgba(0, 0, 0, 0.8);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     display: flex;
@@ -12,4 +14,10 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+.container {
+    background-color: #f8a7e7;
+    padding: 20px 40px;
+    border-radius: 5px;
 }
