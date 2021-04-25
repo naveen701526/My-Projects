@@ -14,11 +14,11 @@ sounds.forEach(sound => {
 
     btn.innerText = sound
 
-    // btn.addEventListener('click', () => {
+    btn.addEventListener('click', () => {
+        
         
 
-
-    // })
+    })
 
     document.querySelector('#buttons').appendChild(btn)
 })
