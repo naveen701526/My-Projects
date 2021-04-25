@@ -8,7 +8,7 @@ body {
     margin: 0;
     height: 100vh;
     background-color: #222;
-
+    position: relative;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -27,6 +27,7 @@ body {
     background-color: aquamarine;
     font-family: inherit;
     font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .btn:focus {
@@ -37,4 +38,16 @@ body {
     transform: scale(1.1);
     transition: transform 0.5s ease-in-out;
     opacity: 0.8;
+}
+
+#but {
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+#but1 {
+    position: absolute;
+    top: 0;
+    right: 20px;
 }
