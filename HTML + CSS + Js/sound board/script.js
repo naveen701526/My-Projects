@@ -16,9 +16,13 @@ sounds.forEach(sound => {
 
     btn.addEventListener('click', () => {
         
-        
+        pauseSongs()
+
+        document.getElementById(sound).play()
 
     })
 
     document.querySelector('#buttons').appendChild(btn)
 })
+
+
