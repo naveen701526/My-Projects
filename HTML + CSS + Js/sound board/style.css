@@ -40,7 +40,7 @@ body {
     opacity: 0.8;
 }
 
-#but {
+/* #but {
     position: absolute;
     top: 0;
     left: 20px;
@@ -50,4 +50,32 @@ body {
     position: absolute;
     top: 0;
     right: 20px;
+} */
+
+.specialbuttons {
+    display: grid;
+    grid-template-columns: repeat(2, 5fr);
+    top: 0;
+    position: absolute;
+}
+
+@media (max-width: 500px) {
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        margin: 3rem;
+    }
+
+    .specialbuttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+    }
+    body {
+        overflow: scroll;
+        overflow-x: hidden;
+    }
 }
