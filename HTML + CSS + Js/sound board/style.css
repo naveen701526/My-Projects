@@ -8,7 +8,7 @@ body {
     margin: 0;
     height: 100vh;
     background-color: #222;
-    color: antiquewhite;
+
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -16,4 +16,25 @@ body {
     align-items: center;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
+}
+
+.btn {
+    margin: 1rem;
+    padding: 2rem 4rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: aquamarine;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+    opacity: 0.8;
 }
