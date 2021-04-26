@@ -55,3 +55,12 @@ h3 {
 .btn:focus {
     outline: 0;
 }
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:hover {
+    background-color: rgba(182, 245, 88, 0.6);
+    transition: all 0.4s ease-in-out;
+}
