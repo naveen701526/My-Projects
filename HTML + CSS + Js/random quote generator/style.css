@@ -51,3 +51,7 @@ h3 {
     font-size: 16px;
     cursor: pointer;
 }
+
+.btn:focus {
+    outline: 0;
+}
