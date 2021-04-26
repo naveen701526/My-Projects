@@ -3,7 +3,7 @@ const btn = document.querySelector('#btn')
 const quotes = document.querySelector('.quotes')
 
 
-
+btn.addEventListener('click', generateQuote)
 
 generateQuote()
 
