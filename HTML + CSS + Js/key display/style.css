@@ -43,3 +43,9 @@ body {
     color: whitesmoke;
     font-size: 14px;
 }
+
+@media (max-width: 500px) {
+    .key {
+        margin-bottom: 2rem;
+    }
+}
