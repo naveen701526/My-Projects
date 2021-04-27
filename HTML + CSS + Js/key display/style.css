@@ -6,7 +6,7 @@
 
 body {
     background-color: rgba(0, 0, 0, 0.7);
-    color: whitesmoke;
+    color: rgba(0, 0, 0, 0.7);
     font-family: 'Orelega One', cursive;
     display: flex;
     align-items: center;
@@ -15,4 +15,21 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
+    padding: 20px;
+}
+
+.key {
+    border: 2px solid grey;
+    background-color: #eee;
+    box-shadow: 1px 1px 3px rgba(241, 227, 227, 0.1);
+    display: inline-flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    flex-direction: column;
+    margin: 10px;
+    min-width: 150px;
+    position: relative;
+    border-radius: 10px;
 }
