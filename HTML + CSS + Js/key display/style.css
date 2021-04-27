@@ -33,3 +33,13 @@ body {
     position: relative;
     border-radius: 10px;
 }
+
+.key small {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: whitesmoke;
+    font-size: 14px;
+}
