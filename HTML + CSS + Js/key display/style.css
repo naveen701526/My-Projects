@@ -25,7 +25,7 @@ body {
     display: inline-flex;
     align-items: center;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 100;
     padding: 20px;
     flex-direction: column;
     margin: 10px;
