@@ -5,6 +5,8 @@
 }
 
 body {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: whitesmoke;
     font-family: 'Orelega One', cursive;
     display: flex;
     align-items: center;
