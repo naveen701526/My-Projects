@@ -37,5 +37,18 @@ h1 {
 }
 
 .faq.active h3 {
-    color: blanchedalmond;
+    color: rgb(255, 218, 163);
+}
+
+.faq.active::before,
+.faq.active::after {
+    content: '\f4ad';
+    font-family: 'Font Awesome 5 Free';
+    color: rgb(233, 233, 107);
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
 }
