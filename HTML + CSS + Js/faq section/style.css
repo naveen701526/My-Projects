@@ -47,8 +47,20 @@ h1 {
     color: rgb(233, 233, 107);
     font-size: 7rem;
     position: absolute;
-    opacity: 0.2;
+    opacity: 0.3;
     top: 20px;
     left: 20px;
     z-index: 0;
+}
+
+.faq.active::before {
+    color: rgb(148, 235, 17);
+    top: -10px;
+    left: -30px;
+    opacity: 0.4;
+    transform: rotateY(180deg);
+}
+
+.faq-title {
+    margin: 0 35px 0 0;
 }
