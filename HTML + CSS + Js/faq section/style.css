@@ -13,3 +13,8 @@ h1 {
     margin: 50px 0 30px;
     text-align: center;
 }
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
