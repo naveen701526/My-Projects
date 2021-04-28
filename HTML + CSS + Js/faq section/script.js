@@ -16,40 +16,13 @@ btn.forEach(button => {
             }
         
         
-            // console.log(btns);
+            
         if (btns[1] !== 'active') {
                 
             button.parentNode.classList.toggle('active')
-            // console.log(button.parentNode);
+            
         }
-        // else {
-            
-        //     // console.log(button.parentNode);
-        // }
         
-        
-
-
-        // console.log(button.parentNode.classList);
-
-        
-        // console.log(btns);
-
-        // console.log(btns);
-
-        // while (bt) {
-            
-        // }
-
-
-
-        
-
-        
-
-        // console.log(button.parentNode.classList);
-
-        // console.log(button);
     })
 })
 
