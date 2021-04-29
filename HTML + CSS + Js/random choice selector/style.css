@@ -32,6 +32,7 @@ textarea {
     text-transform: capitalize;
     margin: 0 0 20px;
     font-size: 16px;
+    box-shadow: rgba(10, 7, 7, 0.589) 0px 5px 15px;
 }
 
 textarea:focus {
