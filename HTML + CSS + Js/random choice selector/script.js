@@ -1,10 +1,17 @@
+// tagsEl refers to div tag with id tags where we'll 
+// be adding our tags for the game
 const tagsEl = document.getElementById('tags')
+
+// textarea points to Element where we'll enter the choices
 const textarea = document.getElementById('textarea')
 
 
+// when page is loaded automatically it'll point on textarea element
 textarea.focus()
 
 
+
+// input section where we start our game flow starts from here
 textarea.addEventListener('keyup', e => {
     createTags(e.target.value)
 
@@ -22,6 +29,8 @@ textarea.addEventListener('keyup', e => {
 
 
 
+// when input is entered with comma separator
+// it creates a tag for every input with separator
 function createTags(input) {
     const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag => tag.trim())
 
@@ -38,7 +47,8 @@ function createTags(input) {
 
 
 
-
+// after entering of choice in textarea element
+// this function will start the game and give us the result
 function randomSelect() {
     const times = 30
 
@@ -67,7 +77,8 @@ function randomSelect() {
 
 
 
-
+// this function gives you a random nodelist Element
+// each time it is called
 function pickRandomTag() {
     const tags = document.querySelectorAll('.tag')
     return tags[Math.floor(Math.random() * tags.length)]
@@ -75,12 +86,17 @@ function pickRandomTag() {
 
 
 
+// function which add highlight class on span element
+// when it is selected
 function highlightTag(tag) {
     tag.classList.add('highlight')
 }
 
 
 
+
+// function which removes highlight class on span element
+// when it is not selected
 function unHighlightTag(tag) {
     tag.classList.remove('highlight')
 }
