@@ -50,3 +50,7 @@ textarea:focus {
     font-size: 14px;
     display: inline-block;
 }
+
+.tag.highlight {
+    background-color: #6f92f3;
+}
