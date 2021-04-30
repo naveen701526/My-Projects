@@ -61,3 +61,10 @@ nav.active ul li {
     opacity: 1;
     transform: rotateY(360deg);
 }
+
+nav ul a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+}
