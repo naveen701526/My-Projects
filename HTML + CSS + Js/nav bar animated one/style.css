@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mandali', sans-serif;
+    background-color: rgb(250, 215, 210);
+    background-image: linear-gradient(
+        to bottom,
+        rgb(250, 215, 210) 0%,
+        rgb(250, 215, 210) 50%,
+        #f54646 50%,
+        #f54646 100%
+    );
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
