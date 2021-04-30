@@ -68,3 +68,17 @@ nav ul a {
     text-decoration: none;
     margin: 0 10px;
 }
+
+.icon {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.icon:focus {
+    outline: 0;
+}
