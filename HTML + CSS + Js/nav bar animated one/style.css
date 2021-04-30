@@ -33,3 +33,7 @@ nav {
     transition: width 0.6s linear;
     overflow-x: hidden;
 }
+
+nav.active {
+    width: 350px;
+}
