@@ -73,8 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // this function will decide whether the two cards choosen are same or not... main logic of game
     function checkForMatch() {
-        pass;
+        const cards = document.querySelectorAll('img');
+        const optionOneId = cardsChosenId[0];
+        const optionTwoId = cardsChosenId[1];
+
+        if (cardsChosen[0] === cardsChosen[1]) {
+            alert('You found a Match');
+            cards[optionOneId].setAttribute('src', 'images/white.png');
+            cards[optionTwoId].setAttribute('src', 'images/white.png');
+            cards[optionOneId].removeEventListener('click', flipCard);
+            cards[optionTwoId].removeEventListener('click', flipCard);
+            cardsWon.push(cardsChosen);
+        }
     }
+
     // a function which will flip the cards when the user clicks on it.
     function flipCard() {
         let cardId = this.getAttribute('data-id');
