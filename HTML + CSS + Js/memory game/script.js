@@ -85,6 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[optionTwoId].removeEventListener('click', flipCard);
             cardsWon.push(cardsChosen);
         }
+
+        cardsChosen = [];
+        cardsChosenId = [];
+
+        resultDisplay.textContent = cardsWon.length;
     }
 
     // a function which will flip the cards when the user clicks on it.
