@@ -98,6 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosenId = [];
 
         resultDisplay.textContent = cardsWon.length;
+        if (cardsWon.length === cardArray.length / 2) {
+            resultDisplay.textContent = 'Congratulations! You found them all!';
+        }
     }
 
     // a function which will flip the cards when the user clicks on it.
