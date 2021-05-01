@@ -72,16 +72,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // this function will decide whether the two cards choosen are same or not... main logic of game
-
+    function checkForMatch() {
+        pass;
+    }
     // a function which will flip the cards when the user clicks on it.
     function flipCard() {
         let cardId = this.getAttribute('data-id');
         cardsChosen.push(cardArray[cardId].name);
         cardsChosenId.push(cardId);
         this.setAttribute('src', cardArray[cardId].img);
-        // if (cardsChosen.length === 2) {
-        //     setTimeout(checkForMatch, 500);
-        // }
+        if (cardsChosen.length === 2) {
+            setTimeout(checkForMatch, 500);
+        }
     }
 
     createBoard();
