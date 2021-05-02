@@ -11,20 +11,12 @@ body {
     position: relative;
 }
 
-/* .content {
-    position: relative;
-    display: flex;
-} */
-
-/* h2 {
-    margin: 2rem;
-} */
-
 .score-display {
     position: absolute;
     top: 0;
     left: 20px;
     display: flex;
+    margin-bottom: 10px;
 }
 
 .display-time {
@@ -32,6 +24,7 @@ body {
     top: 0;
     right: 20px;
     display: flex;
+    margin-bottom: 10px;
 }
 
 .score-display h2 {
@@ -50,7 +43,8 @@ body {
 
 .mole {
     background-image: url('mole.jpg');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .grid {
