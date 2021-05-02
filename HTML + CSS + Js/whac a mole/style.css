@@ -14,3 +14,10 @@ body {
     background-image: url('mole.jpg');
     background-size: cover;
 }
+
+.grid {
+    width: 606px;
+    height: 606px;
+    display: flex;
+    flex-wrap: wrap;
+}
