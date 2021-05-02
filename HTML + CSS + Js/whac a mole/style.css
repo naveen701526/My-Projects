@@ -2,6 +2,44 @@
 
 body {
     font-family: 'Play', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* .content {
+    position: relative;
+    display: flex;
+} */
+
+/* h2 {
+    margin: 2rem;
+} */
+
+.score-display {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: flex;
+}
+
+.display-time {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+}
+
+.score-display h2 {
+    margin: 1rem;
+}
+
+.display-time h2 {
+    margin: 1rem;
 }
 
 .square {
