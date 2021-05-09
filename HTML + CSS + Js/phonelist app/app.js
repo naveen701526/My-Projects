@@ -77,7 +77,7 @@ class Store {
     }
 
     static displayPhones() {
-        const phones = Store.getPhones();
+        const phones = Store.getPhone();
 
         phones.forEach(function (phone) {
             const ui = new UI();
@@ -107,6 +107,9 @@ class Store {
         localStorage.setItem('phones', JSON.stringify(phones));
     }
 }
+
+// DOM Load Event
+document.addEventListener('DOMContentLoaded', Store.displayPhones);
 
 // Event Listeners
 document.getElementById('number-form').addEventListener('submit', function (e) {
