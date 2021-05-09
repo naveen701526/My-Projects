@@ -15,7 +15,7 @@ class UI {
         document.getElementById('name').value = '';
     }
 
-    addPhoneToList() {
+    addPhoneToList(phone) {
         const list = document.getElementById('number-list');
         // Create tr element
         const row = document.createElement('tr');
