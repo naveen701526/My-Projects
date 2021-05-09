@@ -72,8 +72,8 @@ document.getElementById('number-form').addEventListener('submit', function (e) {
         // Error alert
         ui.showAlert('Please fill in all fields', 'alert-danger');
     } else {
-        // Add book to list
-        ui.addBookToList(phone);
+        // Add phone content to list
+        ui.addPhoneToList(phone);
 
         // Show success
         ui.showAlert('Phone List Added!', 'success');
