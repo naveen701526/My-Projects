@@ -76,7 +76,7 @@ document.getElementById('number-form').addEventListener('submit', function (e) {
         ui.addPhoneToList(phone);
 
         // Show success
-        ui.showAlert('Phone List Added!', 'success');
+        ui.showAlert('Phone List Added!', 'alert-success');
 
         // Clear fields
         ui.clearFields();
