@@ -9,6 +9,7 @@ class Phone {
 
 // UI Constructor
 class UI {
+    // Clear Fields
     clearFields() {
         document.getElementById('relation').value = 'Sister';
         document.getElementById('number').value = '';
@@ -30,6 +31,7 @@ class UI {
         list.appendChild(row);
     }
 
+    // Show Alert
     showAlert(message, className) {
         // Create div
         const div = document.createElement('div');
@@ -53,10 +55,56 @@ class UI {
         }, 3000);
     }
 
+    // Delete Book
     deletePhone(target) {
         if (target.parentElement.className == 'delete') {
             target.parentElement.parentElement.parentElement.remove();
         }
+    }
+}
+
+// Local Storage Class
+class Store {
+    static getPhone() {
+        let phones;
+        if (localStorage.getItem('phones') === null) {
+            phones = [];
+        } else {
+            phones = JSON.parse(localStorage.getItem('phones'));
+        }
+
+        return phones;
+    }
+
+    static displayPhones() {
+        const phones = Store.getPhones();
+
+        phones.forEach(function (phone) {
+            const ui = new UI();
+
+            // Add phone to UI
+            ui.addPhoneToList(phone);
+        });
+    }
+
+    static addPhone(phone) {
+        const phones = Store.getPhone();
+
+        phones.push(phone);
+
+        localStorage.setItem('phones', JSON.stringify(phones));
+    }
+
+    static removePhone(relation) {
+        const phones = Store.getPhone();
+
+        phones.forEach(function (book, index) {
+            if (book.relation === relation) {
+                phones.splice(index, 1);
+            }
+        });
+
+        localStorage.setItem('phones', JSON.stringify(phones));
     }
 }
 
@@ -81,6 +129,9 @@ document.getElementById('number-form').addEventListener('submit', function (e) {
         // Add phone content to list
         ui.addPhoneToList(phone);
 
+        // Add to LS
+        Store.addPhone(phone);
+
         // Show success
         ui.showAlert('Phone List Added!', 'alert-success');
 
@@ -99,8 +150,13 @@ document.getElementById('number-list').addEventListener('click', (e) => {
     // Delete phone
     ui.deletePhone(e.target);
 
+    // Remove from LS
+    Store.removePhone(
+        e.target.parentElement.parentElement.previousElementSibling.textContent
+    );
+
     // Show message
-    ui.showAlert('Book Removed!', 'alert-success');
+    ui.showAlert('Phone Entry Removed!', 'alert-success');
 
     e.preventDefault();
 });
