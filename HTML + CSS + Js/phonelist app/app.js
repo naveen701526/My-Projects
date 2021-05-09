@@ -52,6 +52,12 @@ class UI {
             document.querySelector('.alert').remove();
         }, 3000);
     }
+
+    deletePhone(target) {
+        if (target.parentElement.className == 'delete') {
+            target.parentElement.parentElement.parentElement.remove();
+        }
+    }
 }
 
 // Event Listeners
@@ -81,6 +87,20 @@ document.getElementById('number-form').addEventListener('submit', function (e) {
         // Clear fields
         ui.clearFields();
     }
+
+    e.preventDefault();
+});
+
+// Event Listener for delete
+document.getElementById('number-list').addEventListener('click', (e) => {
+    // Instantiate UI
+    const ui = new UI();
+
+    // Delete phone
+    ui.deletePhone(e.target);
+
+    // Show message
+    ui.showAlert('Book Removed!', 'alert-success');
 
     e.preventDefault();
 });
