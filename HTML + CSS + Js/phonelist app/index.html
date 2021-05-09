@@ -13,11 +13,11 @@
             crossorigin="anonymous"
         />
 
-        <title>Hello, world!</title>
+        <title>Phone List</title>
     </head>
     <body>
         <div class="container">
-            <h1>Add Number</h1>
+            <h1 class="text-center">Phone List</h1>
             <form id="number-form">
                 <!-- <div>
                     <label for="title">Title</label>
@@ -62,7 +62,10 @@
                     <input type="text" id="isbn" class="u-full-width" />
                 </div> -->
 
-                <select class="form-select" aria-label="Default select example">
+                <select
+                    class="form-select mb-3"
+                    aria-label="Default select example"
+                >
                     <option selected value="1">Sister</option>
                     <option value="2">Brother</option>
                     <option value="3">Aunt</option>
@@ -88,13 +91,10 @@
                     <option value="21">Others</option>
                 </select>
 
-                <div>
-                    <!-- <input type="submit" value="Submit" class="u-full-width" /> -->
-                    <button type="button" class="btn btn-secondary btn-lg btn-block">Submit</button>
-                    </button>
-                </div>
+                <!-- <input type="submit" value="Submit" class="u-full-width" /> -->
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-            <table class="u-full-width">
+            <table class="container-fluid mt-3">
                 <thead>
                     <tr>
                         <th>Person Name</th>
