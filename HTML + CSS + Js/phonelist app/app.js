@@ -10,7 +10,7 @@ class Phone {
 // UI Constructor
 class UI {
     clearFields() {
-        document.getElementById('relation').value = '';
+        document.getElementById('relation').value = 'Sister';
         document.getElementById('number').value = '';
         document.getElementById('name').value = '';
     }
@@ -24,10 +24,33 @@ class UI {
     <td>${phone.name}</td>
     <td>${phone.number}</td>
     <td>${phone.relation}</td>
-    <td><a href="#" class="delete">X<a></td>
+    <td><a href="#" class="delete"><i class="fas fa-times-circle"></i><a></td>
   `;
 
         list.appendChild(row);
+    }
+
+    showAlert(message, className) {
+        // Create div
+        const div = document.createElement('div');
+        // Add classes
+        div.className = `alert ${className} text-center`;
+
+        // Add Attribute
+        div.setAttribute('role', 'alert');
+        // Add text
+        div.appendChild(document.createTextNode(message));
+        // Get parent
+        const container = document.querySelector('.container');
+        // Get form
+        const form = document.querySelector('#number-form');
+        // Insert alert
+        container.insertBefore(div, form);
+
+        // Timeout after 3 sec
+        setTimeout(function () {
+            document.querySelector('.alert').remove();
+        }, 3000);
     }
 }
 
@@ -44,11 +67,20 @@ document.getElementById('number-form').addEventListener('submit', function (e) {
     // // Instantiate UI
     const ui = new UI();
 
-    // // Add phone to list
-    ui.addPhoneToList(phone);
+    // Validate
+    if (name === '' || number === '') {
+        // Error alert
+        ui.showAlert('Please fill in all fields', 'alert-danger');
+    } else {
+        // Add book to list
+        ui.addBookToList(phone);
 
-    // // Clear fields
-    ui.clearFields();
+        // Show success
+        ui.showAlert('Phone List Added!', 'success');
+
+        // Clear fields
+        ui.clearFields();
+    }
 
     e.preventDefault();
 });
