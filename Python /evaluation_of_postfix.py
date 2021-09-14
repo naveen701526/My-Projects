@@ -58,4 +58,4 @@ class Evaluate:
 # Driver program to test above function
 exp = "231*+9-"
 obj = Evaluate(len(exp))
-print "postfix evaluation: %d"%(obj.evaluatePostfix(exp))
+print("postfix evaluation: %d"%(obj.evaluatePostfix(exp)))
