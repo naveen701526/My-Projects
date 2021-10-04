@@ -8,18 +8,19 @@ class Solution:
     def isSameTree(self, p, q):
         if p is None:
             if q is None:
-                return True
+                return True #both tree are empty
             else:
-                return False
+                return False #one tree is empty(p) and other is non-empty(q)
         if q is None:
             if p is None:
-                return True
+                return True  #both tree are empty
             else:
-                return False
+                return False #one tree is empty(q) and other is non-empty(p)
         if p.val != q.val:
-            return False
+            return False #value of node not equal means not same
         
-        return self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right)
+        return self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right) 
+        #recursion on lst and rst if both true then trees are same
         
         
 opt = Solution()
