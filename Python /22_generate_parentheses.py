@@ -27,3 +27,5 @@ class Solution:
         
 opt = Solution()
 print(opt.generateParenthesis(n=3))
+
+#Detailed Explanation of the above code is provide here https://rb.gy/nrjbeq
