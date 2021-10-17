@@ -1,0 +1,44 @@
+/*Finding the duplicate element in an array
+Sample Input:
+[3 4 1 4 1]
+
+Sample Output:
+1*/
+
+
+import java.io.*;
+import java.util.*;
+public class Duplicate 
+{
+    public static void main(String[] args)throws Exception
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] a=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        Duplicate ob=new Duplicate();
+        int result=ob.duplicated(a);
+        System.out.println(result);
+        
+    }
+    public int duplicated(final int[] A)
+    {
+            Arrays.sort(A);
+            int x=-1;
+            int l=A.length;
+            for(int i=0;i<l;i++)
+            {
+               if(A[i]==A[i+1])
+               {
+                   x=A[i];
+                   break;
+               }
+               else 
+                   x=-1;
+            }
+        return x;
+    }
+}
