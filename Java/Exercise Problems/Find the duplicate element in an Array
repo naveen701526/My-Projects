@@ -42,3 +42,44 @@ public class Duplicate
         return x;
     }
 }
+
+
+
+
+/* This duplicate function onlt return the one duplicate element like in the given example also duplicate elements are 1,4 but its returning only 1.
+I have tried to do some changes please have a look on them.*/
+
+import java.io.*;
+import java.util.*;
+public class Duplicate 
+{
+    public static void main(String[] args)throws Exception
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] a=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        Duplicate ob=new Duplicate();
+        ArrayList<Integer> result=ob.duplicated(a);
+        System.out.println(result);
+        
+    }
+    public ArrayList<Integer> duplicated(final int[] A)
+    {
+        ArrayList<Integer> duplicateElements=new ArrayList<>();
+        ArrayList<Integer> arr=new ArrayList<Integer>();
+        
+        for(int i=0;i<A.length;i++){
+            if(!arr.contains(A[i])){
+                arr.add(A[i]);
+            }
+            else{
+                duplicateElements.add(A[i]);
+            }
+        }
+    return duplicateElements;
+    }
+}
