@@ -1,0 +1,62 @@
+/*Input:
+1 2 3
+4 5 6
+7 8 9
+Return the following:
+[ 
+  [1],
+  [2, 4],
+  [3, 5, 7],
+  [6, 8],
+  [9]
+]
+
+Input: 
+1 2
+3 4
+Return the following: 
+[
+  [1],
+  [2, 3],
+  [4]
+]*/
+
+import java.io.*;
+import java.util.*;
+public class Anti_diagonals 
+{
+    public ArrayList<ArrayList<Integer>> diagonal(ArrayList<ArrayList<Integer>> A) 
+    {
+        int n=A.size();
+        ArrayList<ArrayList<Integer>> res=new ArrayList<ArrayList<Integer>>();
+        for(int i=0;i<2*n-1;i++)
+            res.add(new ArrayList<Integer>());
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                res.get(i+j).add(A.get(i).get(j));
+            }
+        }
+        return res;
+    }
+    public static void main(String[] args)throws IOException
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        ArrayList<ArrayList<Integer>> a=new ArrayList<ArrayList<Integer>>();
+        for(int i=0;i<n;i++)
+        {
+            ArrayList list = new ArrayList<>();
+            for(int j=0;j<n;j++)
+            {
+                list.add(sc.nextInt());
+            }
+            a.add(list);
+        }
+        System.out.println(a);
+        Anti_diagonals ob=new Anti_diagonals();
+        ArrayList<ArrayList<Integer>> result=ob.diagonal(a);
+        System.out.println(result);
+    }
+}
