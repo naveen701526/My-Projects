@@ -1,38 +1,71 @@
-class cal():
-    def __init__(self,a,b):
-        self.a=a
-        self.b=b
-    def add(self):
-        return self.a+self.b
-    def mul(self):
-        return self.a*self.b
-    def div(self):
-        return self.a/self.b
-    def sub(self):
-        return self.a-self.b
-a=int(input("Enter first number: "))
-b=int(input("Enter second number: "))
-obj=cal(a,b)
-choice=1
-while choice!=0:
-    print("0. Exit")
-    print("1. Add")
-    print("2. Subtraction")
-    print("3. Multiplication")
-    print("4. Division")
-    choice=int(input("Enter choice: "))
-    if choice==1:
-        print("Result: ",obj.add())
-    elif choice==2:
-        print("Result: ",obj.sub())
-    elif choice==3:
-        print("Result: ",obj.mul())
-    elif choice==4:
-        print("Result: ",round(obj.div(),2))
-    elif choice==0:
-        print("Exiting!")
-    else:
-        print("Invalid choice!!")
- 
- 
-print()
+def add(P, Q):    
+
+   # This function is used for adding two numbers   
+
+   return P + Q   
+
+def subtract(P, Q):   
+
+   # This function is used for subtracting two numbers   
+
+   return P - Q   
+
+def multiply(P, Q):   
+
+   # This function is used for multiplying two numbers   
+
+   return P * Q   
+
+def divide(P, Q):   
+
+   # This function is used for dividing two numbers    
+
+   return P / Q    
+
+# Now we will take inputs from the user    
+
+print ("Please select the operation.")    
+
+print ("a. Add")    
+
+print ("b. Subtract")    
+
+print ("c. Multiply")    
+
+print ("d. Divide")    
+
+    
+
+choice = input("Please enter choice (a/ b/ c/ d): ")    
+
+    
+
+num_1 = int (input ("Please enter the first number: "))    
+
+num_2 = int (input ("Please enter the second number: "))    
+
+    
+
+if choice == 'a':    
+
+   print (num_1, " + ", num_2, " = ", add(num_1, num_2))    
+
+    
+
+elif choice == 'b':    
+
+   print (num_1, " - ", num_2, " = ", subtract(num_1, num_2))    
+
+    
+
+elif choice == 'c':    
+
+   print (num1, " * ", num2, " = ", multiply(num1, num2))    
+
+elif choice == 'd':    
+
+   print (num_1, " / ", num_2, " = ", divide(num_1, num_2))    
+
+else:    
+
+   print ("This is an invalid input")    
