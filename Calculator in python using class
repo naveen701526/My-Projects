@@ -63,8 +63,8 @@ elif choice == 'c':
    print (num1, " * ", num2, " = ", multiply(num1, num2))    
 
 elif choice == 'd':    
-
-   print (num_1, " / ", num_2, " = ", divide(num_1, num_2))    
+   if (num_2 == 0) : print ("Invalid Input")
+   else : print (num_1, " / ", num_2, " = ", divide(num_1, num_2))    
 
 else:    
 
