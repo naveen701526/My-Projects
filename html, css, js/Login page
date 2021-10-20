@@ -1,3 +1,8 @@
+How to Create a Simple Login Page Using HTML and CSS
+You can use the html and css code which is present below to design a simple login page 
+
+Html code:
+
 <!DOCTYPE html>    
 
 <html>    
@@ -57,3 +62,126 @@
 </body>    
 
 </html>    
+
+
+
+Css code: 
+
+
+body  
+
+{  
+
+    margin: 0;  
+
+    padding: 0;  
+
+    background-color:#6abadeba;  
+
+    font-family: 'Arial';  
+
+}  
+
+.login{  
+
+        width: 382px;  
+
+        overflow: hidden;  
+
+        margin: auto;  
+
+        margin: 20 0 0 450px;  
+
+        padding: 80px;  
+
+        background: #23463f;  
+
+        border-radius: 15px ;  
+
+          
+
+}  
+
+h2{  
+
+    text-align: center;  
+
+    color: #277582;  
+
+    padding: 20px;  
+
+}  
+
+label{  
+
+    color: #08ffd1;  
+
+    font-size: 17px;  
+
+}  
+
+#Uname{  
+
+    width: 300px;  
+
+    height: 30px;  
+
+    border: none;  
+
+    border-radius: 3px;  
+
+    padding-left: 8px;  
+
+}  
+
+#Pass{  
+
+    width: 300px;  
+
+    height: 30px;  
+
+    border: none;  
+
+    border-radius: 3px;  
+
+    padding-left: 8px;  
+
+      
+
+}  
+
+#log{  
+
+    width: 300px;  
+
+    height: 30px;  
+
+    border: none;  
+
+    border-radius: 17px;  
+
+    padding-left: 7px;  
+
+    color: blue;  
+
+  
+
+  
+
+}  
+
+span{  
+
+    color: white;  
+
+    font-size: 17px;  
+
+}  
+
+a{  
+
+    float: right;  
+
+    background-color: grey;  
+
+}  
