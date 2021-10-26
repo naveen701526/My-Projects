@@ -1,0 +1,185 @@
+//Description : A mini java project for library database management
+//Name : Isha Shukla
+//Date Submitted: 26-10-2021
+
+
+import java.util.Scanner;
+	class Book //creating a class book 
+	{   public int isbnno;
+	    public String bookname;
+	    public String authorname;
+	    public String publication_num;
+	    Scanner input = new Scanner(System.in);
+	    Book(String bookname, String authorname, int isbnno, String publication_num) //constructor to initialize book details
+	    {
+	      this.bookname=bookname;
+	      this.authorname=authorname;
+	      this.isbnno=isbnno;
+	      this.publication_num=publication_num;
+	    } 
+	}
+	class Library //creating a library class 
+	{
+	public Book thebooks[]= new Book[50]; //Array that stores Book Object
+	public int count; //Counter for number of objects added in Array
+	Scanner input = new Scanner(System.in);
+	public int compare_books(Book b1,Book b2) //to check if book of same name already exists
+	  { 
+	      if(b1.bookname.equalsIgnoreCase(b2.bookname)) 
+	      { 
+	        System.out.println("Book of this name already exists");
+	        return 0;
+	      }
+	      if(b1.isbnno==b2.isbnno) //to check if book of same isbn number already exists
+	     { 
+	         System.out.println("Book of this ISBN number already exists");
+	         return 0; 
+	      }
+	      return 1;
+	   }
+	public void addbook() //function that adds new object of Book in thebooks
+	{ 
+	  if(count<50) //to check that number of objects does not exceed size of array
+	  {
+	     String bookname,authorname, publication_num;
+	     int isbnno;
+	 
+	      try 
+	      { System.out.println("Enter book name");
+	        bookname=input.nextLine();
+	        System.out.println("Enter author name");
+	        authorname=input.nextLine();
+	        System.out.println("Enter ISBN number");
+	        isbnno=input.nextInt();
+	        System.out.println("Enter publication year");
+	        publication_num=input.nextLine();  
+	        publication_num=input.nextLine(); 
+	        thebooks[count] =  new Book(bookname, authorname, isbnno, publication_num);
+	        count++;
+	         }
+	        catch(Exception e)
+	        {
+	        System.out.println("Invalid input"); //catches exception if datatype of input does not match
+	        }
+	        
+	    } 
+	  else{System.out.println("No space"); } 
+	  bubbleSort();
+    }
+     public void bubbleSort()
+     {
+	    int position; 
+	    int num=count; //setting value of num to index of last element
+	    //time complexity O(n^2) for sorting (n=count-1)
+        for(int k=0;k<num-1;k++)
+      {   for(position=0; position<num-k-1; position++)
+            { if(thebooks[position].isbnno>thebooks[position+1].isbnno) //implementing bubble sort
+	         { 
+	          Book temp;  //swaps elements
+	          temp=thebooks[position];
+	          thebooks[position]=thebooks[position+1];
+	          thebooks[position+1]=temp;
+	           }
+	         }
+	   }
+         
+     }
+	
+	public int binary_search(int x) //sorts array by bubble sort method and the implements binary search
+	                                //takes in isbn number as parameter
+	{  
+	   int start=0;
+	   int end=count-1;
+	   //time complexity O(logn)
+	  while(start<=end) //implementing binary search
+	  { 
+	   int mid=start+(end-1)/2; //setting pointer to middle position
+	
+	  if(thebooks[mid].isbnno==x)
+	     return mid; //return index of element
+	  if(thebooks[mid].isbnno>x)
+	     end=mid-1; // traversing first half by changing count to mid-1
+	  if(thebooks[mid].isbnno<x)
+	     start=mid+1; //traversing last half by changing start to mid+1
+	  }
+	  System.out.println("Book not found!");
+	  return -1; //if book not found
+	    
+	}
+	public void SearchByIsbnNo() //search book by isbn number
+	{ System.out.println("Search by ISBN number");
+	  int isbnno; //getting isbn number as input
+	  System.out.println("Enter ISBN number");
+	  isbnno= input.nextInt();
+	  int result=binary_search(isbnno);
+	  if (result==-1)
+	    { System.out.println("Book of this isbn number not found"); }
+	  else
+	    { System.out.println("Name\t\tAuthor\t\tISBN number\t\t publication year");
+	     System.out.println(thebooks[result].bookname +"\t"+thebooks[result].authorname +"\t"+thebooks[result].isbnno+"\t"+thebooks[result].publication_num);
+	    }
+	}
+	public void SearchByAuthorName() // linear search of books by author name
+	//time complexity O(n)
+	  {
+	   String authorname;
+	   System.out.println("Search by Author name");
+	   System.out.println("Enter Author Name");
+	   authorname=input.nextLine();
+	   authorname=input.nextLine();
+
+	   int flag=0; //setting flag
+	  
+	   for(int i=0;i<count;i++)
+	   {
+	      if(authorname.equalsIgnoreCase(thebooks[i].authorname)) 
+	      { System.out.println("Name\t\tAuthor\t\tISBN number\t\tPublication year");
+	        System.out.println( thebooks[i].bookname +"\t"+thebooks[i].authorname +"\t"+thebooks[i].isbnno+"\t"+thebooks[i].publication_num);
+	        flag++; //book found. incrementing flag
+	       }
+	   } 
+	   if(flag==0)
+	     System.out.println("Book not found!"); 
+	 }
+    void DisplayAllBooks() //display all books in library database
+	  {
+	    System.out.println("Name\t\tAuthor\t\tISBN number\tPublication year");
+	    for(int i=0;i<count;i++)
+	    {
+	       System.out.println(thebooks[i].bookname +"\t"+thebooks[i].authorname +"\t"+thebooks[i].isbnno+"\t\t"+thebooks[i].publication_num);    
+	    }
+	  }         
+}
+   	  
+	 public class Main //Main class
+	 {
+	   public static void main(String[] args) //main method
+	   {
+	   Library obj1 = new Library(); //creating library object
+	   Scanner input = new Scanner(System.in);
+	   System.out.println("Please select one of the following options"); //menu
+	   System.out.println("1. Add books"+ "\n" + "2.Display books"+"\n"+"3.Search by ISBN number"+"\n"+"4.Search by author name"+"\n"+"5.Exit");
+	   int choice; 
+
+	   do 
+	      { 
+	        System.out.println("Enter choice");
+	        choice=input.nextInt();
+	        switch(choice)
+	         {
+	          case 1: {obj1.addbook();
+	                 
+	                   break;} 
+	          case 2: {obj1.DisplayAllBooks();
+	                   break;}
+	          case 3: {obj1.SearchByIsbnNo();
+	                   break;}
+	          case 4: {obj1.SearchByAuthorName();
+	                   break;}
+	         }           
+	     }
+	while(choice!=5); //exiting loop
+	  }
+  }
+
+
