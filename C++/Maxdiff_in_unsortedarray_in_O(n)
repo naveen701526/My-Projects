@@ -1,0 +1,74 @@
+#include <bits/stdc++.h>
+#define long long
+#define vi vector<int>
+#define pii pair<int<int>>
+#define f(i,a,n) for(int i=a;i<n;i++)
+#define pb push_back
+using namespace std;
+
+int BucketSort(vi v, int n){
+    int mx=INT_MIN;
+    int mn=INT_MAX;
+    f(i,0,n){
+        mx=max(mx,v[i]);
+        mn=min(mn,v[i]);
+    }
+    float range=mx-mn;
+    float w=n-1;
+    float lw=range/w;
+    int lowerbound=ceil(lw);
+    if((mx-mn)%(n-1)==0){
+        lowerbound++;
+    }
+    vector<vi> Buckets(n-1);
+    f(i,0,n){
+        int idx=(v[i]-mn)/lowerbound;
+        if(Buckets[idx].size()==0){
+            Buckets[idx].pb(v[i]);
+            Buckets[idx].pb(v[i]);
+        }
+        else{
+            if(v[i]>Buckets[idx][1]){
+                Buckets[idx][1]=v[i];
+            }
+            
+            else if(v[i]<Buckets[idx][0]){
+                Buckets[idx][0]=v[i];
+            }
+        }
+    }
+    int maxdiff=0;
+    int prev = mn;
+    for (int i = 0; i < n-1; i++) {
+        if (Buckets[i].size()==0) {
+            continue;
+        }
+        if (Buckets[i][0] - prev > maxdiff) {
+            maxdiff = Buckets[i][0] - prev;
+        }
+        prev = Buckets[i][1];
+    }
+
+    return maxdiff;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    vi v;
+    f(i,0,n){
+        int m;
+        cin>>m;
+        v.pb(m);
+    }
+    if(n==1)
+    cout<<0<<endl;
+    else if(n==2)
+    cout<<abs(v[0]-v[1])<<endl;
+    else
+    {int max=BucketSort(v,n);
+    cout<<max<<endl;}
+
+    return 0;
+
+}
