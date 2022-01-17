@@ -5,15 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-	def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-
-		# This is an approach using stack
-
-		stack = [root] # Taking the root not in the stack so that the loop will be initialized
-		output = [] # Making a list for storing the output
-
-		if root is None:
-			return [] # If the root is None then directly return empty list
-
-		while stack: # Will run till the stack is empty
-			root = stack.pop() # First we will get the root element from the stack by popping the last element from the stack
+    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        if not root:
+            return []
+        return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
