@@ -13,7 +13,7 @@ class Solution {
          if(head == null || head.next == null) {
             return head;
         }
-        ListNode dummy = new ListNode(0, head);
+        ListNode dummyNode = new ListNode(0, head);
         
         while(head!=null){
             while(head.next != null && head.val == head.next.val) {
@@ -22,6 +22,6 @@ class Solution {
             head = head.next;
         }
         
-        return dummy.next;
+        return dummyNode.next;
     }
 }
