@@ -9,16 +9,12 @@ public class Find_Number {
 		System.out.println("Guess the number between 1 to 100\n");
 		do {
 			inputNo = scan.nextInt();
-			if (inputNo > randNo) {
+			if (inputNo > randNo) 
 				System.out.println("Lower number!!");
-			}
-			if (inputNo < randNo) {
+			else if (inputNo < randNo) 
 				System.out.println("Higher number!!");
-			}
-			if (inputNo == randNo) {
-				System.out.println("Correct!!");
-				System.out.println("You guessed in " + userAttempt + "  attempts.");
-			}
+			else
+				System.out.println("Correct!! \nYou guessed in " + userAttempt + "  attempts.");
 			userAttempt++;
 		} while (inputNo != randNo);
 	}
